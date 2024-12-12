@@ -1,0 +1,149 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e9ecef; /* Light grey background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header */
+.dashboard-container h2 {
+    font-size: 2.5rem;
+    color: #4a90e2; /* Soft vibrant blue */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Section Styles */
+.dashboard-container section {
+    margin-bottom: 2.5rem;
+}
+
+.dashboard-container h3 {
+    font-size: 1.75rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-left: 5px solid #4a90e2;
+    padding-left: 1rem;
+}
+
+/* Post List */
+.dashboard-container ul {
+    list-style-type: none;
+}
+
+.dashboard-container ul li {
+    padding: 1.2rem;
+    margin: 1rem 0;
+    background: #f5f8fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-container ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container ul li a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.dashboard-container ul li a:hover {
+    color: #0056b3;
+}
+
+/* No Posts Message */
+.dashboard-container ul li.no-posts {
+    color: #888;
+    font-style: italic;
+}
+
+/* Logout Button */
+.btn-logout {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #4a90e2;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin-top: 2.5rem;
+}
+
+.btn-logout:hover {
+    background: #357ab7;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 2rem;
+        width: 90%;
+    }
+
+    .dashboard-container h2 {
+        font-size: 2rem;
+    }
+
+    .dashboard-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-logout {
+        font-size: 1.1rem;
+    }
+}
+

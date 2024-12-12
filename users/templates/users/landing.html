@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Content Management System</h1>
+        <p class="lead">Your personalized platform for reading and sharing content.</p>
+
+        <div class="actions">
+            <h2>Choose your path:</h2>
+            <div class="buttons">
+                <a href="{% url 'poster_register' %}">
+                    <button class="btn btn-primary">Register as Poster</button>
+                </a>
+                <a href="{% url 'register' %}">
+                    <button class="btn btn-outline-primary">Register as User</button>
+                </a>
+            </div>
+            <div class="buttons">
+                <a href="{% url 'poster_login' %}">
+                    <button class="btn btn-success">Login as Poster</button>
+                </a>
+                <a href="{% url 'login' %}">
+                    <button class="btn btn-outline-success">Login as User</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

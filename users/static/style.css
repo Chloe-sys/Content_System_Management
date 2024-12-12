@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 3rem;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+h1 {
+    font-size: 2.8rem;
+    color: #ffdd00;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Section Heading */
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* Button container */
+.buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button.btn-primary {
+    background-color: #ff7a00;
+    color: white;
+}
+
+button.btn-primary:hover {
+    background-color: #ff5500;
+    transform: scale(1.1);
+}
+
+button.btn-outline-primary {
+    background: transparent;
+    color: #ff7a00;
+    border: 2px solid #ff7a00;
+}
+
+button.btn-outline-primary:hover {
+    background-color: #ff7a00;
+    color: white;
+    transform: scale(1.1);
+}
+
+button.btn-success {
+    background-color: #00d97e;
+    color: white;
+}
+
+button.btn-success:hover {
+    background-color: #00b86e;
+    transform: scale(1.1);
+}
+
+button.btn-outline-success {
+    background: transparent;
+    color: #00d97e;
+    border: 2px solid #00d97e;
+}
+
+button.btn-outline-success:hover {
+    background-color: #00d97e;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

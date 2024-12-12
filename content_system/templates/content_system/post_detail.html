@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/post_details.css">
+</head>
+<body>
+    <div class="post-detail-container">
+        <h1>{{ post.title }}</h1>
+        <div class="post-content">
+            <p>{{ post.content }}</p>
+        </div>
+
+        <div class="reaction-section">
+            <h3>React to this post:</h3>
+
+            {% if user.is_authenticated %}
+                <!-- Like Button -->
+                <form method="post" action="{% url 'like_post' post.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-like">
+                        {% if liked %}
+                            Unlike
+                        {% else %}
+                            Like
+                        {% endif %}
+                    </button>
+                </form>
+
+                <!-- Dislike Button -->
+                <form method="post" action="{% url 'dislike_post' post.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-dislike">
+                        {% if disliked %}
+                            Remove Dislike
+                        {% else %}
+                            Dislike
+                        {% endif %}
+                    </button>
+                </form>
+
+                <!-- Subscribe/Unsubscribe Button -->
+                <form method="post">
+                    {% csrf_token %}
+                    {% if subscribed %}
+                        <button type="submit" name="unsubscribe" class="btn-subscribe unsubscribe">Unsubscribe</button>
+                    {% else %}
+                        <button type="submit" name="subscribe" class="btn-subscribe subscribe">Subscribe</button>
+                    {% endif %}
+                </form>
+            {% else %}
+                <p class="login-reminder">You must be logged in to react to or subscribe to this post.</p>
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+</html>

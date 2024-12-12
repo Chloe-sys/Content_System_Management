@@ -1,0 +1,144 @@
+/* new_postlist.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 2px solid #0073e6; /* Adding a border color */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.post-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.post-item:hover {
+    background-color: #f1f1f1; /* Change on hover */
+}
+
+.post-details h2 {
+    font-size: 1.5rem;
+    color: #0073e6; /* Blue color for headings */
+}
+
+.post-details p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.post-details small {
+    display: block;
+    font-size: 0.9rem;
+    color: #888; /* Lighter gray for smaller text */
+    margin-top: 5px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+.post-actions a {
+    text-decoration: none;
+}
+
+.statistics-section {
+    margin-top: 15px;
+}
+
+.btn-statistics {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.statistics-container {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+button.create-post, button.logout {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #28a745; /* Green color for action buttons */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+button.create-post:hover, button.logout:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
